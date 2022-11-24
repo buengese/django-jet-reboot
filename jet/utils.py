@@ -375,6 +375,7 @@ def get_menu_items(context):
 
             if app_label in original_app_list:
                 item = original_app_list[app_label].copy()
+                item['items'] = item['models']
             else:
                 item = {'app_label': app_label, 'has_perms': True}
 
